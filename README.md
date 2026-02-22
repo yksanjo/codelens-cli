@@ -1,61 +1,84 @@
-# CodeLens CLI
+# codelens-cli
 
-AI-powered code analysis CLI tool for local development workflows.
+## Detailed Description
 
-## Installation
+codelens-cli is maintained as an industry-grade software project with production-ready engineering practices.  
+This repository includes documented setup, quality gates, operational guidance, and governance standards so contributors can safely build, test, and ship changes with confidence.
+
+## Problem Statement
+
+Describe the user or business problem this project solves, the target users, and expected outcomes.
+
+## Solution Overview
+
+Summarize the architecture, core modules, and runtime behavior at a high level.
+
+## Key Features
+
+- Clear project scope and intended use.
+- Reproducible local development workflow.
+- Test coverage and CI quality gates.
+- Security and contribution policies.
+- Deployment-ready repository structure.
+
+## Repository Structure
+
+```text
+.
+|-- src/                  # Core implementation
+|-- tests/                # Automated test suites
+|-- docs/                 # Design notes and operational docs
+|-- .github/workflows/    # CI pipelines
+|-- README.md
+|-- LICENSE
+|-- CONTRIBUTING.md
+|-- SECURITY.md
+|-- CODE_OF_CONDUCT.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Git
+- Project runtime/toolchain for this repo
+
+### Local Setup
 
 ```bash
-npm install -g codelens-cli
+npm ci
+npm run lint
+npm test
+npm run build
 ```
 
 ## Usage
 
-### Health Check
-```bash
-codelens doctor
-```
+Document primary commands, API routes, CLI examples, or UI workflows here.
 
-### Scan for Security Vulnerabilities
-```bash
-# Scan a single file
-codelens scan -f src/index.ts
+## Quality Standards
 
-# Scan a directory
-codelens scan -d ./src
+- CI must pass before merge.
+- Changes require tests for critical behavior.
+- Security-sensitive changes should include risk notes.
+- Keep pull requests focused and reviewable.
 
-# Scan with specific extensions
-codelens scan -d ./src -e .js,.ts,.py
-```
+## Security
 
-### Explain Code
-```bash
-# From file
-codelens explain -f src/index.ts
+See `SECURITY.md` for responsible disclosure and handling guidelines.
 
-# From code string
-codelens explain -c "function hello() { return 'world'; }" -l javascript
-```
+## Contributing
 
-### List Supported Languages
-```bash
-codelens languages
-```
+See `CONTRIBUTING.md` for branching, commit, and pull request expectations.
 
-## Configuration
+## Roadmap
 
-Set the API URL:
-```bash
-export CODELENS_API_URL=http://localhost:3000
-```
+Track upcoming milestones, technical debt, and planned feature work.
 
-Set your OpenAI API key for AI features:
-```bash
-export OPENAI_API_KEY=your_key_here
-```
+## Support
 
-## Commands
+Open a GitHub issue for bugs, feature requests, or documentation gaps.
 
-- `scan` - Scan files for security vulnerabilities
-- `explain` - Explain code in natural language
-- `languages` - List supported languages
-- `doctor` - Check API connection and configuration
+## License
+
+This project is released under the MIT License.
